@@ -7,14 +7,14 @@ import { NgModule } from '@angular/core';
 import { DashboardComponent } from './dashboard.component';
 
 @NgModule({
-  declarations: [
+	declarations: [
 		DashboardComponent
 	],
 	imports: [
 		BrowserModule,
 		FormsModule,
 		HttpModule,
-    RouterModule.forRoot(appRoutes),
+		RouterModule.forRoot(appRoutes),
 		AngularFireModule.initializeApp(firebaseConfig)
 	],
 	providers: [],

@@ -12,8 +12,8 @@ import { CommunityComponent } from './community/community.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 const appRoutes: Routes = [
-  { path: 'dashboard', component: DashboardComponent },
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
+	{ path: 'dashboard', component: DashboardComponent },
+	{ path: '', redirectTo: '/dashboard', pathMatch: 'full' }
 ];
 
 let firebaseConfig = {
@@ -36,7 +36,7 @@ let firebaseConfig = {
 		BrowserModule,
 		FormsModule,
 		HttpModule,
-    RouterModule.forRoot(appRoutes),
+		RouterModule.forRoot(appRoutes),
 		AngularFireModule.initializeApp(firebaseConfig)
 	],
 	providers: [],

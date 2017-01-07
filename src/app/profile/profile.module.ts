@@ -7,14 +7,14 @@ import { NgModule } from '@angular/core';
 import { ProfileComponent } from './profile.component';
 
 @NgModule({
-  declarations: [
+	declarations: [
 		ProfileComponent
 	],
 	imports: [
 		BrowserModule,
 		FormsModule,
 		HttpModule,
-    RouterModule.forRoot(appRoutes),
+		RouterModule.forRoot(appRoutes),
 		AngularFireModule.initializeApp(firebaseConfig)
 	],
 	providers: [],
