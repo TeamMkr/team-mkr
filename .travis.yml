@@ -23,3 +23,6 @@ before_script:
   - npm run build
 
 script: karma start karma.conf.js --single-run
+
+notifications:
+  slack: team-mkr:G7g3d6tosscwjFCnlF6enMm9
