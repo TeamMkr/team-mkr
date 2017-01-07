@@ -13,9 +13,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 const appRoutes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'profile', component: ProfileComponent },
-  { path: 'community', component: CommunityComponent }
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
 ];
 
 let firebaseConfig = {
