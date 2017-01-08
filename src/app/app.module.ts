@@ -10,9 +10,6 @@ import { CommunityModule } from './community/community.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { ProfileComponent } from './profile/profile.component';
-import { CommunityComponent } from './community/community.component';
 
 // const appRoutes: Routes = [
 // 	{ path: 'dashboard', component: DashboardComponent },
