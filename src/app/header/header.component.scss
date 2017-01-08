@@ -7,14 +7,14 @@
 	height: 100px;
 }
 
-#logo {
+#header-logo {
 	flex: 0 0 50px;
 	height: 50px;
 	background: black;
 	margin: 20px;
 }
 
-#nav {
+nav {
 	flex: 0 0 200px;
 	display: flex;
 	flex-flow: row nowrap;
@@ -22,7 +22,7 @@
 	margin-right: 20px;
 }
 
-.links {
+a {
 	flex: 0 0 30px;
 	font-size: 20px;
 	margin: 20px;
