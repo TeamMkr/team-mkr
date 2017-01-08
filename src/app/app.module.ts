@@ -40,7 +40,7 @@ let firebaseConfig = {
 		DashboardModule,
 		ProfileModule,
 		CommunityModule,
-		//RouterModule.forRoot(appRoutes),
+		// RouterModule.forRoot(appRoutes),
 		AngularFireModule.initializeApp(firebaseConfig)
 	],
 	providers: [],
