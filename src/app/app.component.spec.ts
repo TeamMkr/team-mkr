@@ -1,13 +1,42 @@
 /* tslint:disable:no-unused-variable */
-
+import { Component } from '@angular/core';
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+
+@Component({
+	selector: 'tm-header',
+	template: '<div></div>'
+})
+export class TestHeaderComponent {
+}
+@Component({
+	selector: 'community-page',
+	template: '<div></div>'
+})
+export class TestCommunityComponent {
+}
+@Component({
+	selector: 'profile-page',
+	template: '<div></div>'
+})
+export class TestProfileComponent {
+}
+@Component({
+	selector: 'dashboard-page',
+	template: '<div></div>'
+})
+export class TestDashboardComponent {
+}
 
 describe('AppComponent', () => {
 	beforeEach(() => {
 		TestBed.configureTestingModule({
 			declarations: [
-			AppComponent
+			AppComponent,
+			TestHeaderComponent,
+			TestProfileComponent,
+			TestCommunityComponent,
+			TestDashboardComponent
 			],
 		});
 	TestBed.compileComponents();
