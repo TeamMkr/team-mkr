@@ -6,23 +6,23 @@ import { DebugElement } from '@angular/core';
 import { CommunityComponent } from './community.component';
 
 describe('CommunityComponent', () => {
-  let component: CommunityComponent;
-  let fixture: ComponentFixture<CommunityComponent>;
+	let component: CommunityComponent;
+	let fixture: ComponentFixture<CommunityComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ CommunityComponent ]
-    })
-    .compileComponents();
-  }));
+	beforeEach(async(() => {
+		TestBed.configureTestingModule({
+			declarations: [ CommunityComponent ]
+		})
+		.compileComponents();
+	}));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(CommunityComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+	beforeEach(() => {
+		fixture = TestBed.createComponent(CommunityComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	});
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+	it('should create', () => {
+		expect(component).toBeTruthy();
+	});
 });

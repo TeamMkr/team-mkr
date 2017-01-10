@@ -1,13 +1,42 @@
 /* tslint:disable:no-unused-variable */
-
+import { Component } from '@angular/core';
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+
+@Component({
+	selector: 'tm-header',
+	template: '<div></div>'
+})
+export class TestHeaderComponent {
+}
+@Component({
+	selector: 'community-page',
+	template: '<div></div>'
+})
+export class TestCommunityComponent {
+}
+@Component({
+	selector: 'profile-page',
+	template: '<div></div>'
+})
+export class TestProfileComponent {
+}
+@Component({
+	selector: 'dashboard-page',
+	template: '<div></div>'
+})
+export class TestDashboardComponent {
+}
 
 describe('AppComponent', () => {
 	beforeEach(() => {
 		TestBed.configureTestingModule({
 			declarations: [
-			AppComponent
+			AppComponent,
+			TestHeaderComponent,
+			TestProfileComponent,
+			TestCommunityComponent,
+			TestDashboardComponent
 			],
 		});
 	TestBed.compileComponents();
@@ -19,16 +48,4 @@ describe('AppComponent', () => {
 		expect(app).toBeTruthy();
 	}));
 
-	it(`should have as title 'app works!'`, async(() => {
-		let fixture = TestBed.createComponent(AppComponent);
-		let app = fixture.debugElement.componentInstance;
-		expect(app.title).toEqual('app works!');
-	}));
-
-	it('should render title in a h1 tag', async(() => {
-		let fixture = TestBed.createComponent(AppComponent);
-		fixture.detectChanges();
-		let compiled = fixture.debugElement.nativeElement;
-		expect(compiled.querySelector('h1').textContent).toContain('app works!');
-	}));
 });
