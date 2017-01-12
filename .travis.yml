@@ -25,5 +25,8 @@ before_script:
 
 script: karma start karma.conf.js --single-run
 
+after_success:
+  firebase deploy --email ${FIREBASE_USERNAME} --password ${FIREBASE_PASSWORD}
+
 notifications:
   slack: team-mkr:G7g3d6tosscwjFCnlF6enMm9
