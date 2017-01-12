@@ -27,7 +27,7 @@ script: karma start karma.conf.js --single-run
 
 after_success:
   - npm run build
-  - firebase deploy --token $FIREBASE_TOKEN
+  - firebase deploy --token "$FIREBASE_TOKEN"
 
 notifications:
   slack: team-mkr:G7g3d6tosscwjFCnlF6enMm9
