@@ -19,16 +19,14 @@ before_install:
 
 before_script:
   - npm install karma -g
-  - npm install
+  - npm install firebase-tools -g
   - npm run lint
   - npm run build
 
 script: karma start karma.conf.js --single-run
 
 after_success:
-  if [[ $TRAVIS_BRANCH = "master" && $TRAVIS_PULL_REQUEST = "false" ]]; then
-    firebase deploy --email ${FIREBASE_USERNAME} --password ${FIREBASE_PASSWORD}
-  fi
+  firebase deploy --token "$FIREBASE_TOKEN"
 
 notifications:
   slack: team-mkr:G7g3d6tosscwjFCnlF6enMm9
