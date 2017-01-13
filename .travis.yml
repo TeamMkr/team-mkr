@@ -25,7 +25,7 @@ script: npm run test:once
 
 after_success:
   - npm run build:prod
-  - firebase deploy --token "${FIREBASE_TOKEN}"
+  - firebase deploy --token=${FIREBASE_TOKEN}
 
 notifications:
   slack: team-mkr:G7g3d6tosscwjFCnlF6enMm9
