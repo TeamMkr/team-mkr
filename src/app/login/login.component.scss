@@ -5,13 +5,21 @@
 }
 
 #description {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
 	flex: 0 0 400px;
 	background: lightblue;
 	margin: 30px;
+	padding: 10px;
 }
 
+#text {
+	flex: 0 0 100%;
+}
 #login-box {
-	flex: 0 0 400px;
+	flex: 0 0 300px;
 	background: lightblue;
 	margin: 30px;
 	text-align: center;
@@ -40,3 +48,4 @@ button {
 	margin-top: 20px;
 	flex: 0 0 100%;
 }
+
