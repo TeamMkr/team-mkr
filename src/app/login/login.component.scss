@@ -45,7 +45,15 @@ input,label {
 }
 
 button {
-	margin-top: 20px;
-	flex: 0 0 100%;
+	margin: 20px 0;
+	flex: 0 0 180px;
+}
+
+#github-logo {
+	height: 50px;
+	width: 50px;
+	background-size: 30px 30px;
+	background: url('./assets/GitHub-Logo.png') no-repeat center;
+	margin: 20px;
 }
 
