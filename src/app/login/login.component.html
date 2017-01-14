@@ -11,8 +11,11 @@
 		<input type='text'>
 		<label id='password'>Password</label>
 		<input type='password'>
-		<button type="submit">Login</button>
+		<button type="submit" id="standard-login">Login</button>
 		<label>OR</label>
-		<div id='github-logo'></div>
+		<button id="github-signin" (click)="login()">
+			<div>Login with Github</div>
+			<div id='github-logo'>{{ (af.auth | async)?.uid }}</div>
+		</button>
 	</div>
 </form>

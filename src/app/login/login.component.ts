@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { AngularFire } from 'angularfire2';
 
 @Component({
 	selector: 'login-page',
 	templateUrl: './login.component.html',
 	styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
-	constructor() { }
-
-	ngOnInit() {
+	constructor(public af: AngularFire) {
 	}
-
+	login() {
+		this.af.auth.login();
+	}
+	logout() {
+		this.af.auth.logout();
+	}
 }

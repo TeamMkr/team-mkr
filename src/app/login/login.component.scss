@@ -44,9 +44,20 @@ input,label {
 	margin: 10px;
 }
 
-button {
-	margin: 20px 0;
+#standard-login {
 	flex: 0 0 180px;
+	margin: 20px 0;
+	padding: 10px;
+}
+
+#github-signin {
+	margin: 20px 0;
+	flex: 0 0 280px;
+	display: flex;
+	flex-flow: row nowrap;
+	div {
+		margin: auto;
+	}
 }
 
 #github-logo {
@@ -54,6 +65,5 @@ button {
 	width: 50px;
 	background-size: 30px 30px;
 	background: url('./assets/GitHub-Logo.png') no-repeat center;
-	margin: 20px;
 }
 

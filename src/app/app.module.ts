@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { AngularFireModule } from 'angularfire2';
+import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { ProfileModule } from './profile/profile.module';
 import { CommunityModule } from './community/community.module';
@@ -19,6 +19,10 @@ let firebaseConfig = {
 	messagingSenderId: '694572425110'
 };
 
+const firebaseAuthConfig = {
+	provider: AuthProviders.Github,
+	method: AuthMethods.Popup
+};
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -34,7 +38,7 @@ let firebaseConfig = {
 		CommunityModule,
 		LoginModule,
 		AppRoutingModule,
-		AngularFireModule.initializeApp(firebaseConfig)
+		AngularFireModule.initializeApp(firebaseConfig, firebaseAuthConfig)
 	],
 	providers: [],
 	bootstrap: [AppComponent]
