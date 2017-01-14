@@ -1,0 +1,42 @@
+:host {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+}
+
+#description {
+	flex: 0 0 400px;
+	background: lightblue;
+	margin: 30px;
+}
+
+#login-box {
+	flex: 0 0 400px;
+	background: lightblue;
+	margin: 30px;
+	text-align: center;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+#content {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin-top: 10px;
+}
+
+label {
+	flex: 0 0 100%;
+}
+
+input,label {
+	margin: 10px;
+}
+
+button {
+	margin-top: 20px;
+	flex: 0 0 100%;
+}
