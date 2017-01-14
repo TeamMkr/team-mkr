@@ -34,4 +34,10 @@ describe('AppComponent', () => {
 		expect(compiled.querySelector('tm-header')).toBeTruthy();
 	}));
 
+	it('should render the router-outlet', async(() => {
+		let fixture = TestBed.createComponent(AppComponent);
+		let compiled = fixture.debugElement.nativeElement;
+		expect(compiled.querySelector('router-outlet')).toBeTruthy();
+	}));
+
 });
