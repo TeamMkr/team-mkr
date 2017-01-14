@@ -32,11 +32,11 @@ describe('AppComponent', () => {
 	beforeEach(() => {
 		TestBed.configureTestingModule({
 			declarations: [
-			AppComponent,
-			TestHeaderComponent,
-			TestProfileComponent,
-			TestCommunityComponent,
-			TestDashboardComponent
+				AppComponent,
+				TestHeaderComponent,
+				TestProfileComponent,
+				TestCommunityComponent,
+				TestDashboardComponent
 			],
 		});
 	TestBed.compileComponents();
@@ -46,6 +46,12 @@ describe('AppComponent', () => {
 		let fixture = TestBed.createComponent(AppComponent);
 		let app = fixture.debugElement.componentInstance;
 		expect(app).toBeTruthy();
+	}));
+
+	it('should render the header', async(() => {
+		let fixture = TestBed.createComponent(AppComponent);
+		let compiled = fixture.debugElement.nativeElement;
+		expect(compiled.querySelector('tm-header')).toBeTruthy();
 	}));
 
 });
