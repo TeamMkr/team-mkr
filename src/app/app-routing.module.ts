@@ -6,7 +6,7 @@ import { CommunityComponent } from './community/community.component';
 import { ProfileComponent } from './profile/profile.component';
 import { LoginComponent } from './login/login.component';
 
-const appRoutes: Routes = [
+export const appRoutes: Routes = [
 	{ path: 'login', component: LoginComponent },
 	{ path: 'dashboard', component: DashboardComponent },
 	{ path: 'community', component: CommunityComponent },
