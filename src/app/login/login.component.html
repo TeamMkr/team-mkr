@@ -1,5 +1,5 @@
-<div id='description'>
-	<div id='text'>
+<div id='description-container'>
+	<div id='description'>
 		Team Mkr is a platform to connect with other developers.
 		Find others who want to work on similar skills or projects
 		and start projects with them.
@@ -7,15 +7,18 @@
 </div>
 <form id='login-box'>
 	<div id='content'>
-		<label id='username'>Username</label>
-		<input type='text'>
-		<label id='password'>Password</label>
-		<input type='password'>
-		<button type="submit" id="standard-login">Login</button>
-		<label>OR</label>
-		<button id="github-login" (click)="login()">
-			<div>Login with Github</div>
-			<div id='github-logo'></div>
-		</button>
+		<h2>Log in to Team Mkr</h2>
+		<div id='firebase-auth-container'>
+			<button id="github-login" (click)="login()">
+				<div>Log in with Github</div>
+				<div id='github-logo'></div>
+			</button>
+		</div>
+
+		<div id='standard-auth-container'>
+			<input type='text' placeholder='Username'>
+			<input type='password' placeholder='Password'>
+			<button type="submit" id="standard-login">Log In</button>
+		</div>
 	</div>
 </form>
