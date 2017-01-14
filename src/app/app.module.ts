@@ -1,20 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AngularFireModule } from 'angularfire2';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { ProfileModule } from './profile/profile.module';
 import { CommunityModule } from './community/community.module';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-
-// const appRoutes: Routes = [
-// 	{ path: 'dashboard', component: DashboardComponent },
-// 	{ path: '', redirectTo: '/dashboard', pathMatch: 'full' }
-// ];
 
 let firebaseConfig = {
 	apiKey: 'AIzaSyBNTppNoKWC1K2xGzEgp5pcmFNCGvBcl3c',
@@ -37,7 +32,7 @@ let firebaseConfig = {
 		DashboardModule,
 		ProfileModule,
 		CommunityModule,
-		// RouterModule.forRoot(appRoutes),
+		AppRoutingModule,
 		AngularFireModule.initializeApp(firebaseConfig)
 	],
 	providers: [],
