@@ -18,12 +18,14 @@ before_install:
   - sh -e /etc/init.d/xvfb start
 
 before_script:
-  - npm install karma -g
-  - npm install
+  - npm install firebase-tools -g
   - npm run lint
-  - npm run build
 
-script: karma start karma.conf.js --single-run
+script: npm run test:once
+
+after_success:
+  - npm run build:prod
+  - firebase deploy --token "$FIREBASE_TOKEN"
 
 notifications:
   slack: team-mkr:G7g3d6tosscwjFCnlF6enMm9
