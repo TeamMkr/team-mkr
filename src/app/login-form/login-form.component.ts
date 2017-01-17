@@ -1,30 +1,17 @@
 import { Component } from '@angular/core';
-import { AngularFire } from 'angularfire2';
-import { Router } from '@angular/router';
+import { LoginFormService } from './login-form.service';
 
 @Component({
-  selector: 'tm-login-form',
-  templateUrl: './login-form.component.html',
-  styleUrls: ['./login-form.component.scss']
+	selector: 'tm-login-form',
+	templateUrl: './login-form.component.html',
+	styleUrls: ['./login-form.component.scss'],
+	providers: [ LoginFormService ]
 })
 export class LoginFormComponent {
-
-  constructor(public af: AngularFire, public router: Router) {
+	constructor(private loginService: LoginFormService) {
 	}
-	loginGithub() {
-		this.af.auth.subscribe(auth => {
-			if (auth.github.uid) {
-				this.af.auth.login()
-				.then(_ => {
-					this.router.navigateByUrl('/dashboard');
-				})
-			}
-		});
-	}
-	login() {
-	}
-	logout() {
-		this.af.auth.logout();
+	loginGithub(): void {
+		this.loginService.loginGithub();
 	}
 
 }

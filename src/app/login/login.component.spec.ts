@@ -4,7 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { LoginComponent } from './login.component';
-import { TestLoginFormComponent } from '../testing/test-login-form';
+import { TestLoginFormComponent } from '../../testing/test-login-form.component';
 
 describe('LoginComponent', () => {
 	let component: LoginComponent;
