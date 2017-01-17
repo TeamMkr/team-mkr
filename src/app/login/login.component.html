@@ -5,20 +5,4 @@
 		and start projects with them.
 	</p>
 </div>
-<form id='login-box'>
-	<div id='content'>
-		<h1>Log in to Team Mkr</h1>
-		<div id='firebase-auth-container'>
-			<button id="github-login" (click)="loginGithub()">
-				<span>Log in with Github</span>
-				<div id='github-logo'></div>
-			</button>
-		</div>
-
-		<div id='standard-auth-container'>
-			<input type='text' placeholder='Email'>
-			<input type='password' placeholder='Password'>
-			<button type="submit" id="standard-login">Log In</button>
-		</div>
-	</div>
-</form>
+<tm-login-form></tm-login-form>

@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { LoginComponent } from './login.component';
+import { TestLoginFormComponent } from '../testing/test-login-form';
 
 describe('LoginComponent', () => {
 	let component: LoginComponent;
@@ -11,7 +12,10 @@ describe('LoginComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ LoginComponent ]
+			declarations: [
+				LoginComponent,
+				TestLoginFormComponent
+			]
 		})
 		.compileComponents();
 	}));
@@ -24,5 +28,11 @@ describe('LoginComponent', () => {
 
 	it('should create', () => {
 		expect(component).toBeTruthy();
+	});
+
+	it('should render the login form'), async(() => {
+		let fixture = TestBed.createComponent(AppComponent);
+		let compiled = fixture.debugElement.nativeElement;
+		expect(compiled.querySelector('tm-login-form')).toBeTruthy();
 	});
 });
