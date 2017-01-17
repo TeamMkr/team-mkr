@@ -10,13 +10,16 @@ import { Router } from '@angular/router';
 export class LoginComponent {
 	constructor(public af: AngularFire, public router: Router) {
 	}
-	login() {
+	loginGithub() {
 		this.af.auth.subscribe(auth => {
-			console.log(auth);
 			if (auth.github.uid) {
+				this.af.auth.login();
 				this.router.navigateByUrl('/dashboard');
 			}
 		});
+	}
+	login() {
+
 	}
 	logout() {
 		this.af.auth.logout();
