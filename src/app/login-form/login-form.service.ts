@@ -1,21 +1,25 @@
 import { Injectable } from '@angular/core';
-import { AngularFire } from 'angularfire2';
-import { Router } from '@angular/router';
+import { AngularFire, FirebaseAuthState } from 'angularfire2';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class LoginFormService {
-	constructor(public af: AngularFire, public router: Router) {
+	private userInfo: FirebaseAuthState;
+	constructor(public af: AngularFire) {
+		this.userInfo = null;
 	}
 
-	loginGithub(): void {
-		this.af.auth.subscribe(auth => {
-			if (auth.github.uid) {
-				this.af.auth.login()
-				.then(_ => {
-					this.router.navigateByUrl('/dashboard');
-				})
-			}
-		});
+	getUser() {
+		return this.userInfo;
+	}
+
+	setUser(userInfo): void {
+		this.userInfo = userInfo;
+	}
+
+	loginGithub(): Observable<FirebaseAuthState> {
+		return this.af.auth
+			.filter(auth => !!auth.github.uid);
 	}
 
 	logout() {
