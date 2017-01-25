@@ -2,10 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { AngularFireModule } from 'angularfire2';
+import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { ProfileModule } from './profile/profile.module';
 import { CommunityModule } from './community/community.module';
+import { LoginModule } from './login/login.module';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -17,6 +18,11 @@ let firebaseConfig = {
 	databaseURL: 'https://team-mkr-a5cd6.firebaseio.com',
 	storageBucket: 'team-mkr-a5cd6.appspot.com',
 	messagingSenderId: '694572425110'
+};
+
+const firebaseAuthConfig = {
+	provider: AuthProviders.Github,
+	method: AuthMethods.Popup
 };
 
 @NgModule({
@@ -32,10 +38,11 @@ let firebaseConfig = {
 		DashboardModule,
 		ProfileModule,
 		CommunityModule,
+		LoginModule,
 		AppRoutingModule,
-		AngularFireModule.initializeApp(firebaseConfig)
+		AngularFireModule.initializeApp(firebaseConfig, firebaseAuthConfig)
 	],
 	providers: [],
-	bootstrap: [AppComponent]
+	bootstrap: [ AppComponent ]
 })
 export class AppModule {}

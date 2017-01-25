@@ -1,0 +1,59 @@
+:host {
+	flex: 0 0 600px;
+	background: lightblue;
+	margin: 30px;
+	text-align: center;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+#content {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin: 20px;
+}
+
+#firebase-auth-container {
+	flex: 0 0 250px;
+	border-right: 1px solid gray;
+	box-sizing: border-box;
+}
+
+#standard-auth-container {
+	flex: 0 0 250px;
+}
+
+input, label, button, h1 {
+	flex: 0 0 100%;
+}
+
+input {
+	margin: 5px 30px;
+	padding: 10px;
+}
+
+#standard-login {
+	flex: 0 0 180px;
+	margin: 10px 0;
+	padding: 10px;
+}
+
+#github-login {
+	margin: 5px auto;
+	flex: 0 0 280px;
+	display: flex;
+	flex-flow: row nowrap;
+	span {
+		margin: auto;
+	}
+}
+
+#github-logo {
+	height: 50px;
+	width: 50px;
+	background-size: 30px 30px;
+	background: url('./assets/GitHub-Logo.png') no-repeat center;
+}

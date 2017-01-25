@@ -1,0 +1,19 @@
+:host {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+}
+
+#description-container {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	flex: 0 0 400px;
+	background: lightblue;
+	margin: 30px;
+	padding: 30px;
+	p {
+		flex: 0 0 100%;
+	}
+}
+
