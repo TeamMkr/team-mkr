@@ -6,7 +6,6 @@ import { AngularFire } from 'angularfire2';
 	selector: 'dashboard-page',
 	templateUrl: './dashboard.component.html',
 	styleUrls: ['./dashboard.component.scss'],
-	providers: [ LoginFormService ],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DashboardComponent implements OnInit {

@@ -4,6 +4,7 @@ import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { DashboardComponent } from './dashboard.component';
+import { LoginFormService } from '../login-form/login-form.service';
 
 @NgModule({
 	declarations: [
@@ -17,7 +18,7 @@ import { DashboardComponent } from './dashboard.component';
 		FormsModule,
 		HttpModule
 	],
-	providers: []
+	providers: [ LoginFormService ]
 })
 
 export class DashboardModule { }
