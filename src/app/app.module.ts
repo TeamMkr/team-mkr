@@ -11,7 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 
-let firebaseConfig = {
+const firebaseConfig = {
 	apiKey: 'AIzaSyBNTppNoKWC1K2xGzEgp5pcmFNCGvBcl3c',
 	authDomain: 'team-mkr-a5cd6.firebaseapp.com',
 	databaseURL: 'https://team-mkr-a5cd6.firebaseio.com',

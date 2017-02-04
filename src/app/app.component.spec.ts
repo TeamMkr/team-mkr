@@ -23,20 +23,20 @@ describe('AppComponent', () => {
 	});
 
 	it('should create the app', async(() => {
-		let fixture = TestBed.createComponent(AppComponent);
-		let app = fixture.debugElement.componentInstance;
+		const fixture = TestBed.createComponent(AppComponent);
+		const app = fixture.debugElement.componentInstance;
 		expect(app).toBeTruthy();
 	}));
 
 	it('should render the header', async(() => {
-		let fixture = TestBed.createComponent(AppComponent);
-		let compiled = fixture.debugElement.nativeElement;
+		const fixture = TestBed.createComponent(AppComponent);
+		const compiled = fixture.debugElement.nativeElement;
 		expect(compiled.querySelector('tm-header')).toBeTruthy();
 	}));
 
 	it('should render the router-outlet', async(() => {
-		let fixture = TestBed.createComponent(AppComponent);
-		let compiled = fixture.debugElement.nativeElement;
+		const fixture = TestBed.createComponent(AppComponent);
+		const compiled = fixture.debugElement.nativeElement;
 		expect(compiled.querySelector('router-outlet')).toBeTruthy();
 	}));
 

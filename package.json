@@ -6,7 +6,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "lint": "tslint \"src/**/*.ts\"",
+    "lint": "ng lint",
     "build": "ng build",
     "pretest": "npm run lint",
     "test": "ng test",
